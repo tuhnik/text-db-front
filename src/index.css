@@ -41,7 +41,8 @@ html, body, #root {
  display: flex;
  flex-direction: row;
  align-items: flex-end;
- justify-content: space-between
+ justify-content: space-between;
+ user-select: none
 }
 
 .theme-button {
