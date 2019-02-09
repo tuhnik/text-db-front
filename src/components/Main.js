@@ -17,7 +17,7 @@ class Main extends Component {
         </div>
       </aside>
       <article>
-        <div className="headline">All stories</div>
+        <div className="headline">All posts</div>
         <div className="header-line"></div>
         <StoryList/>
       </article>
