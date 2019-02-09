@@ -22,7 +22,7 @@ class StoryList extends Component {
   render() {
     return (<>
         {data.map((el, i)=>{
-            return <StoryItem heading={el.heading} tags={el.tags} description={this.desc(el)} date={el.date} views={el.views}/>
+            return <StoryItem key={i} heading={el.heading} tags={el.tags} description={this.desc(el)} date={el.date} views={el.views}/>
         })}
         </>
     );
