@@ -5,7 +5,6 @@ import App from './App';
 import { createStore, StoreProvider } from 'easy-peasy';
 import { BrowserRouter as Router} from "react-router-dom";
 
-
 const model = {
     theme: {
         current: "light",
@@ -15,7 +14,6 @@ const model = {
 }
 
 const store = createStore(model);
-
 
 ReactDOM.render(<StoreProvider store={store}>
     <Router basename={process.env.PUBLIC_URL}>
