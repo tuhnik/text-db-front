@@ -21,11 +21,17 @@ In eget congue mauris, in varius dui. Sed ullamcorper est in risus tempor, at fa
 
 
 class Story extends Component {
+  goBack = ()=>{
+    this.props.history.goBack()
+  }
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
     <div className="main">
       <aside>
-      <div className="headline">«Back</div>   
+      <div className="headline back-button" onClick={this.goBack}>«Back</div>   
       </aside>
       <article>
         <div className="headline">Story title</div>

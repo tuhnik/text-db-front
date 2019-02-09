@@ -176,3 +176,11 @@ article {
   white-space: pre-wrap;
   font-size: 1.1em;
 }
+
+.back-button {
+  cursor: pointer
+}
+
+.back-button:hover{
+  color: #e34449
+}
