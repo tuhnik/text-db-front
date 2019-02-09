@@ -88,3 +88,35 @@ article {
   cursor: pointer;
   background: #eaeaea
 }
+
+.story-item {
+  vertical-align: center;
+  margin-bottom: 1.5em;
+}
+
+.story-item h2 {
+  display: inline;
+}
+.story-item-tags {
+  display: inline
+}
+
+.story-item-tag {
+  display: inline-block;
+  padding: 1px 5px 1px 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  background: #eaeaea;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer
+}
+.story-item-tag:hover{
+  background: #e34449;
+  color: white;
+}
+
+.story-item-description{
+  font-size: 1.1em;
+}
