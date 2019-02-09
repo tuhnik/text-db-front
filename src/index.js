@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { createStore, StoreProvider } from 'easy-peasy';
+import { BrowserRouter as Router} from "react-router-dom";
 
 
 const model = {
@@ -17,6 +18,8 @@ const store = createStore(model);
 
 
 ReactDOM.render(<StoreProvider store={store}>
-    <App />
+    <Router>
+        <App />
+    </Router>
     </StoreProvider>
 , document.getElementById('root'));

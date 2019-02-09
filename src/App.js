@@ -3,6 +3,8 @@ import { useStore } from 'easy-peasy';
 import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
+import Routes from "./Routes";
+
 
 function App() {
   const theme = useStore(state => state.theme.current);
@@ -10,7 +12,7 @@ function App() {
       <div className={theme}>
         <div className="App">
           <Header></Header>
-          <Main></Main>
+          <Routes/>
           <Footer></Footer>
         </div>
       </div>

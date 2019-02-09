@@ -10,10 +10,12 @@ body {
 
 .light {
   background: #303030;
+  height: 100%;
 }
 
 .dark {
   background: #202020;
+  height: 100%;
 }
 
 
@@ -145,13 +147,15 @@ article {
 .story-item-description{
   font-size: 1.1em;
 }
-.story-item-description a{
+.read-more{
+  display: inline;
   text-decoration: none;
   font-weight: 900;
-  color: #303030
+  color: #303030;
+  cursor: pointer
 }
 
-a:hover{
+.read-more:hover{
   color: #e34449
 }
 
@@ -165,4 +169,8 @@ a:hover{
 
 .story-item-bottom > * {
   margin-right: 0.5em
+}
+
+.story-text {
+  white-space: pre-wrap;
 }
