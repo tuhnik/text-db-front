@@ -59,7 +59,7 @@ aside {
 }
 
 .headline {
-  font-size: 2em;
+  font-size: 1.75em;
   font-weight: 700;
 }
 .header-line {
@@ -80,4 +80,10 @@ article {
 
 .tag {
   padding: 5px 0 5px 10px;
+}
+
+.tag:hover {
+  color: #e34449;
+  cursor: pointer;
+  background: #eaeaea
 }
