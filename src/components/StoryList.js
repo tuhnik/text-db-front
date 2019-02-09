@@ -12,7 +12,6 @@ let data = [{heading: "Pealkiri...", tags: ["Hello", "Hola", "Random Tag"], desc
 ]
 
 
-
 class StoryList extends Component {
   desc(el) {
       let txt = el.description.substring(0, 350) + "..."

@@ -1,30 +1,21 @@
-import React, { Component } from 'react';
-
+import React from 'react';
+import { useStore } from 'easy-peasy';
 import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
 
-class App extends Component {
-  state={theme: "light"}
-
-  switchTheme(){
-    let theme = this.state.theme
-    theme = theme === "light"?"dark":"light"
-    this.setState({theme})
-  }
-
-  render() {
-    
+function App() {
+  const theme = useStore(state => state.theme.current);
     return (
-      <div className={this.state.theme}>
-      <div className="App" onClick={this.switchTheme.bind(this)}>
-        <Header></Header>
-        <Main></Main>
-        <Footer></Footer>
-      </div>
+      <div className={theme}>
+        <div className="App">
+          <Header></Header>
+          <Main></Main>
+          <Footer></Footer>
+        </div>
       </div>
     );
-  }
+
 }
 
 export default App;
