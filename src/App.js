@@ -1,7 +1,6 @@
 import React from 'react';
 import { useStore } from 'easy-peasy';
 import Header from './components/Header'
-import Main from './components/Main'
 import Footer from './components/Footer'
 import Routes from "./Routes";
 
