@@ -10,12 +10,12 @@ body {
 
 .light {
   background: #303030;
-  height: 100%;
+  min-height: 100%;
 }
 
 .dark {
   background: #202020;
-  height: 100%;
+  min-height: 100%;
 }
 
 
@@ -33,6 +33,7 @@ html, body, #root {
 .App {
   max-width: 1346px;
   width: 100%;
+
   min-height: 100%;
   margin: 0 auto;
 }
@@ -173,4 +174,5 @@ article {
 
 .story-text {
   white-space: pre-wrap;
+ 
 }
