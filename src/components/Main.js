@@ -9,7 +9,7 @@ class Main extends Component {
     <div className="main">
       <aside>
       <div className="headline">Tags</div>
-        <div className="header-line"></div>
+        <div className="line"></div>
         <div className="tag-list">
         {tags.map((el, i)=>{
           return <div key={i}className="tag">{el}</div>
@@ -18,7 +18,7 @@ class Main extends Component {
       </aside>
       <article>
         <div className="headline">All posts</div>
-        <div className="header-line"></div>
+        <div className="line"></div>
         <StoryList/>
       </article>
     </div>

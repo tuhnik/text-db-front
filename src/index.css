@@ -9,11 +9,12 @@ body {
 }
 
 .light {
-  background: #202020;
+  background: #303030;
+ 
 }
 
 .dark {
-  background: #303030;
+  background: #202020;
 }
 
 
@@ -78,7 +79,8 @@ aside {
   font-size: 1.5em;
   font-weight: 700;
 }
-.header-line {
+
+.line {
   width: 100%;
   margin-bottom: 20px;
   margin-top: 20px;
