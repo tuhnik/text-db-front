@@ -22,7 +22,7 @@ class Main extends Component {
         <div className="headline">All posts</div>
         <div className="line"></div>
         <StoryList/>
-        <Pagination totalRecords={330} currentPage={9}/>
+        <Pagination totalRecords={133} currentPage={9}/>
       </article>
     </div>
     );
