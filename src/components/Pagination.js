@@ -54,8 +54,7 @@ function Pagination(props){
     function clickNext(){
         if(currentPage<=totalPages){
             changePage(currentPage+1)
-        }     
-        console.log(pages)
+        }
     }
 
     function clickPrevious(){
