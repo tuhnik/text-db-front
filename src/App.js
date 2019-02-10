@@ -6,6 +6,7 @@ import Routes from "./Routes";
 
 
 function App() {
+  document.title = "Koala Life";
   const theme = useStore(state => state.theme.current);
     return (
       <div className={theme}>
@@ -16,7 +17,6 @@ function App() {
         </div>
       </div>
     );
-
 }
 
 export default App;
