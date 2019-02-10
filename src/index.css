@@ -201,7 +201,11 @@ article {
   user-select: none;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center
 }
+
+
+
 
 .pagination-button {
   text-align: center;
