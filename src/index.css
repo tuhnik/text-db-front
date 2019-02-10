@@ -141,6 +141,14 @@ article {
   color: white;
 }
 
+.story-item-summary {
+  font-style: italic;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #a0a0a0;
+  margin-bottom: 0.4em;
+}
+
 .story-item-description{
   font-size: 1.1em;
 }

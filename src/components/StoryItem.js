@@ -16,6 +16,7 @@ class StoryItem extends Component {
                     return <div className="story-item-tag" key={i}>{el}</div>
                 })}
             </div>
+            <div className="story-item-summary">{this.props.summary}</div>
             <div className="story-item-description">{this.props.description}
             <div className="read-more" onClick={()=>this.openStory(this.props.id)}> Read more »</div>
             </div>
