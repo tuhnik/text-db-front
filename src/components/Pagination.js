@@ -5,16 +5,57 @@ import React, { useState } from 'react';
 
 
 function Pagination(props){
- 
-    const [currentPage, changePage] = useState(props.currentPage);
 
-    const {totalRecords = null, pageLimit = 30, pageNeighbours = 0 } = props;
+    const [currentPage, changePage] = useState(props.currentPage);
+    const {totalRecords = null, pageLimit = 5, pageNeighbours = 2, backButton = "«BACK", nextButton= "NEXT»" } = props;
     const totalPages = Math.ceil(totalRecords / pageLimit);
+
+    const totalNumbers = (pageNeighbours * 2) + 3;
+    const totalBlocks = totalNumbers + 2;
+    let pages = []
+    
+    if (totalPages > totalBlocks) {
+        const startPage = Math.max(2, currentPage - pageNeighbours);
+        const endPage = Math.min(totalPages - 1, currentPage + pageNeighbours);
+    
+        pages = range(startPage, endPage);
+    
+        const hasLeftSpill = startPage > 2;
+        const hasRightSpill = (totalPages - endPage) > 1;
+        const spillOffset = totalNumbers - (pages.length + 1);
+    
+        switch (true) {
+            // (1) < {5 6} [7] {8 9} (10)
+            case (hasLeftSpill && !hasRightSpill): {
+            const extraPages = range(startPage - spillOffset, startPage - 1);
+            pages = [backButton, ...extraPages, ...pages];
+            break;
+            }
+            // (1) {2 3} [4] {5 6} > (10)
+            case (!hasLeftSpill && hasRightSpill): {
+            const extraPages = range(endPage + 1, endPage + spillOffset);
+            pages = [...pages, ...extraPages, nextButton];
+            break;
+            }
+            // (1) < {4 5} [6] {7 8} > (10)
+            case (hasLeftSpill && hasRightSpill):
+            default: {
+            pages = [backButton, ...pages, nextButton];
+            break;
+            }
+        }
+        pages =  [1, ...pages, totalPages];   
+        }
+    else {
+    pages =  range(1, totalPages);
+    } 
+    
     
     function clickNext(){
         if(currentPage<=totalPages){
             changePage(currentPage+1)
         }     
+        console.log(pages)
     }
 
     function clickPrevious(){
@@ -22,15 +63,40 @@ function Pagination(props){
             changePage(currentPage-1)
         }
     }
-
+   
     return (
         <div className="Pagination">
-            <div className="pagination-back" onClick={clickPrevious}>Back</div>
-                {currentPage}
-            <div className="pagination-next" onClick={clickNext}>Next</div>    
+            {pages.map((el, i)=>{
+                if(el===nextButton){
+                    return <div onClick={()=>{clickNext()}} key={i} className="pagination-button next">{el}</div>
+                }
+                if(el===backButton){
+                    return <div onClick={()=>{clickPrevious()}} key={i} className="pagination-button back">{el}</div>
+                }
+                if(el===currentPage){
+                    return <div key={i} className="pagination-button current">{el}</div>
+                }
+
+                return <div onClick={()=>{changePage(el)}} key={i} className="pagination-button">{el}</div>
+            })} 
         </div>
     )
 
 }
+
+
+const range = (from, to, step = 1) => {
+    let i = from;
+    const range = [];
+  
+    while (i <= to) {
+      range.push(i);
+      i += step;
+    }
+  
+    return range;
+  }
+  
+
 
 export default Pagination;

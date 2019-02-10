@@ -111,6 +111,10 @@ article {
   margin-bottom: 1.5em;
 }
 
+.si-heading-container {
+  display: flex;
+  align-items: center
+}
 .story-item-heading {
   font-size: 1.5em;
   font-weight: 700;
@@ -121,8 +125,11 @@ article {
   cursor: pointer
 }
 
+
 .story-item-tags {
-  display: inline
+  display: inline-block;
+  margin-left: 0.25em;
+  padding-top: 5px
 }
 
 .story-item-tag {
@@ -134,7 +141,8 @@ article {
   background: #eaeaea;
   font-size: 1em;
   font-weight: 500;
-  cursor: pointer
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 0px #0000004d;
 }
 .story-item-tag:hover{
   background: #e34449;
@@ -191,5 +199,48 @@ article {
 
 .Pagination {
   user-select: none;
-  display: flex
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.pagination-button {
+  text-align: center;
+  box-shadow: 1px 1px 1px 0px #0000004d;
+  color: #303030;
+  background: #dadada;
+  min-width: 1em;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  cursor: pointer;
+}
+.pagination-button:hover{
+  background: #0000003b;
+}
+
+
+.pagination-button.current {
+  background: #303030;
+  color: #dadada
+}
+
+.pagination-button.next {
+  font-weight: 600;
+  background: #e34449;
+  color: #dadada
+}
+
+.pagination-button.next:hover{
+  background: #c72d32
+}
+.pagination-button.back {
+  font-weight: 600;
+  background: #e34449;
+  color: #dadada
+}
+
+.pagination-button.back:hover{
+  background: #c72d32
 }
