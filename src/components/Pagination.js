@@ -47,7 +47,7 @@ function Pagination(props){
         pages =  [1, ...pages, totalPages];   
         }
     else {
-    pages =  range(1, totalPages);
+        pages =  range(1, totalPages);
     } 
     
     
