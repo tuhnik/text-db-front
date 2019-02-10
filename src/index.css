@@ -188,3 +188,8 @@ article {
 .back-button:hover{
   color: #e34449
 }
+
+.Pagination {
+  user-select: none;
+  display: flex
+}
