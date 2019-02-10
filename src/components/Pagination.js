@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 function Pagination(props){
 
     const [currentPage, changePage] = useState(props.currentPage);
-    const {totalRecords = null, pageLimit = 5, pageNeighbours = 2, backButton = "«BACK", nextButton= "NEXT»" } = props;
+    const {pageChanged=()=>{}, totalRecords = null, pageLimit = 5, pageNeighbours = 2, backButton = "«BACK", nextButton= "NEXT»" } = props;
     const totalPages = Math.ceil(totalRecords / pageLimit);
 
     const totalNumbers = (pageNeighbours * 2) + 3;
@@ -51,32 +51,38 @@ function Pagination(props){
     } 
     
     
-    function clickNext(){
+    function clickNext(p){
         if(currentPage<=totalPages){
-            changePage(currentPage+1)
+            pageChanged(p)
+            changePage(p)       
         }
     }
 
-    function clickPrevious(){
+    function clickPrevious(p){
         if(currentPage>1){
-            changePage(currentPage-1)
+            pageChanged(p)
+            changePage(p)
         }
+    }
+
+    function clickPageItem(p){
+        pageChanged(p)
+        changePage(p)
     }
    
     return (
         <div className="Pagination">
             {pages.map((el, i)=>{
                 if(el===nextButton){
-                    return <div onClick={()=>{clickNext()}} key={i} className="pagination-button next">{el}</div>
+                    return <div onClick={()=>{clickNext(currentPage+1)}} key={i} className="pagination-button next">{el}</div>
                 }
                 if(el===backButton){
-                    return <div onClick={()=>{clickPrevious()}} key={i} className="pagination-button back">{el}</div>
+                    return <div onClick={()=>{clickPrevious(currentPage-1)}} key={i} className="pagination-button back">{el}</div>
                 }
                 if(el===currentPage){
                     return <div key={i} className="pagination-button current">{el}</div>
                 }
-
-                return <div onClick={()=>{changePage(el)}} key={i} className="pagination-button">{el}</div>
+                return <div onClick={()=>{clickPageItem(el)}} key={i} className="pagination-button">{el}</div>
             })} 
         </div>
     )
