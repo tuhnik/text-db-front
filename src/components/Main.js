@@ -4,7 +4,6 @@ import Pagination from './Pagination'
 
 let tags = ["Tere", "Hola", "Yo", "Random"]
 
-
 class Main extends Component {
   render() {
     return (
@@ -22,7 +21,7 @@ class Main extends Component {
         <div className="headline">All posts</div>
         <div className="line"></div>
         <StoryList/>
-        <Pagination totalRecords={133} currentPage={9}/>
+        <Pagination totalRecords={64} currentPage={1}/>
       </article>
     </div>
     );

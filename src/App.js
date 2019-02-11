@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useStore } from 'easy-peasy';
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Routes from "./Routes";
 
-
 function App() {
-  document.title = "Koala Life";
+  
+  useEffect(()=> {
+    document.title = "Koala Life";
+  });
   const theme = useStore(state => state.theme.current);
     return (
       <div className={theme}>

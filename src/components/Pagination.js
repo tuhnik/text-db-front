@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
 
-
-
-
-
 function Pagination(props){
 
     const [currentPage, changePage] = useState(props.currentPage);
@@ -44,12 +40,11 @@ function Pagination(props){
             break;
             }
         }
-        pages =  [1, ...pages, totalPages];   
+        pages = [1, ...pages, totalPages];   
         }
     else {
         pages =  range(1, totalPages);
     } 
-    
     
     function clickNext(p){
         if(currentPage<=totalPages){
@@ -89,7 +84,6 @@ function Pagination(props){
 
 }
 
-
 const range = (from, to, step = 1) => {
     let i = from;
     const range = [];
@@ -100,6 +94,4 @@ const range = (from, to, step = 1) => {
     return range;
 }
   
-
-
 export default Pagination;
