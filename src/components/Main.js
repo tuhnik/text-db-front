@@ -21,7 +21,7 @@ class Main extends Component {
         <div className="headline">All posts</div>
         <div className="line"></div>
         <StoryList/>
-        <Pagination totalRecords={64} currentPage={1}/>
+        <Pagination totalRecords={614} currentPage={6} backButton={"Tagasi"}/>
       </article>
     </div>
     );

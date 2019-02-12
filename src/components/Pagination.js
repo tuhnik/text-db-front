@@ -23,21 +23,21 @@ function Pagination(props){
         switch (true) {
             // (1) < {5 6} [7] {8 9} (10)
             case (hasLeftSpill && !hasRightSpill): {
-            const extraPages = range(startPage - spillOffset, startPage - 1);
-            pages = [backButton, ...extraPages, ...pages];
-            break;
+                const extraPages = range(startPage - spillOffset, startPage - 1);
+                pages = [backButton, ...extraPages, ...pages];
+                break;
             }
             // (1) {2 3} [4] {5 6} > (10)
             case (!hasLeftSpill && hasRightSpill): {
-            const extraPages = range(endPage + 1, endPage + spillOffset);
-            pages = [...pages, ...extraPages, nextButton];
-            break;
+                const extraPages = range(endPage + 1, endPage + spillOffset);
+                pages = [...pages, ...extraPages, nextButton];
+                break;
             }
             // (1) < {4 5} [6] {7 8} > (10)
             case (hasLeftSpill && hasRightSpill):
-            default: {
-            pages = [backButton, ...pages, nextButton];
-            break;
+                default: {
+                pages = [backButton, ...pages, nextButton];
+                break;
             }
         }
         pages = [1, ...pages, totalPages];   

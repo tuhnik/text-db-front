@@ -113,8 +113,10 @@ article {
 
 .si-heading-container {
   display: flex;
+  /* mobiilis flex direction muuta */
   align-items: center
 }
+
 .story-item-heading {
   font-size: 1.5em;
   font-weight: 700;
@@ -134,7 +136,7 @@ article {
 .story-item-tag {
   display: inline-block;
   padding: 3px 7px;
-  margin-left: 5px;
+  margin-right: 0.4em;
   margin-bottom: 5px;
   border-radius: 5px;
   background: #eaeaea;
