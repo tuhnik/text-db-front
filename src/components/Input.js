@@ -1,8 +1,17 @@
 import React, { useState } from 'react';
 
 function Input(props){
+    const {onSubmit = ()=>{}, placeholder =""} = props;
     let [text, changeText] = useState("")
-    return <input onChange={e => changeText(e.target.value)}className="input" placeholder={props.placeholder || ""} value={text} ></input>
+    function submitHandler(evt){
+        evt.preventDefault()
+        onSubmit(text)
+        changeText("")
+        
+    }
+    return <form onSubmit={submitHandler}>
+    <input onChange={e => changeText(e.target.value)} className="input" placeholder={placeholder || ""} value={text} ></input>
+    </form>
 }
 
 
