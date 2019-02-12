@@ -254,17 +254,24 @@ article {
 
 .input {
   outline: none;
-  padding: 0 0.5em;
+  padding: 0.3em 0.5em;
   border: 1px solid #ccc;
   border-radius: 5px;
   background: #fff;
   color: #303030;
-  font-size: 1.5em;
-  line-height: 40px;
-  margin-top: 1em;
+  font-size: 1.3em;
+  /* temp margin */
+  margin-top: 1em; 
 }
 
 .input::placeholder { 
-  font-weight: 700;
   color: #dadada;
+}
+
+.footer {
+  color: #303030;
+  padding: 1em;
+  border-top: 1px solid #dadada;
+  background: whitesmoke;
+  font-size: 1.1em;
 }

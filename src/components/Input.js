@@ -6,8 +6,7 @@ function Input(props){
     function submitHandler(evt){
         evt.preventDefault()
         onSubmit(text)
-        changeText("")
-        
+        changeText("")     
     }
     return <form onSubmit={submitHandler}>
     <input onChange={e => changeText(e.target.value)} className="input" placeholder={placeholder || ""} value={text} ></input>
