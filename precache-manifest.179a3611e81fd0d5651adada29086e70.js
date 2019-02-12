@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/text-db-front/static/js/runtime~main.4d250ad2.js"
   },
   {
-    "revision": "350ed98fb257f13408b2",
-    "url": "/text-db-front/static/js/main.350ed98f.chunk.js"
+    "revision": "1ef2481a2df8b833d620",
+    "url": "/text-db-front/static/js/main.1ef2481a.chunk.js"
   },
   {
     "revision": "cee3385e110ea447f21a",
     "url": "/text-db-front/static/js/1.cee3385e.chunk.js"
   },
   {
-    "revision": "350ed98fb257f13408b2",
-    "url": "/text-db-front/static/css/main.6dcc0931.chunk.css"
+    "revision": "1ef2481a2df8b833d620",
+    "url": "/text-db-front/static/css/main.0d959947.chunk.css"
   },
   {
-    "revision": "b8cf7ab14f990dbf41559ec94cf20d91",
+    "revision": "86535106ef2ee4d6fa4587450a3f4f28",
     "url": "/text-db-front/index.html"
   }
 ];
