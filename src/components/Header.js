@@ -8,8 +8,10 @@ function Header() {
     return (
     <header className="header">
         <div className="logo">Koala Life</div>
-        <Searchbar></Searchbar>
-        <div className="theme-button" onClick={switchTheme}>{theme==="light"?"🌙":"☀️"}</div>
+            <div className="header-items-container">
+            <Searchbar></Searchbar>
+            <div className="theme-button" onClick={switchTheme}>{theme==="light"?"🌙":"☀️"}</div>
+        </div>     
     </header>
     );
 }

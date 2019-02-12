@@ -245,3 +245,26 @@ article {
 .pagination-button.back:hover{
   background: #c72d32
 }
+
+.header-items-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+
+.input {
+  outline: none;
+  padding: 0 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  color: #303030;
+  font-size: 1.5em;
+  line-height: 40px;
+  margin-top: 1em;
+}
+
+.input::placeholder { 
+  font-weight: 700;
+  color: #dadada;
+}
