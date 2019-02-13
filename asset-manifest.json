@@ -1,13 +1,13 @@
 {
-  "main.css": "/text-db-front/static/css/main.b774602e.chunk.css",
-  "main.js": "/text-db-front/static/js/main.64642666.chunk.js",
-  "main.js.map": "/text-db-front/static/js/main.64642666.chunk.js.map",
+  "main.css": "/text-db-front/static/css/main.708aa6a4.chunk.css",
+  "main.js": "/text-db-front/static/js/main.f434b66e.chunk.js",
+  "main.js.map": "/text-db-front/static/js/main.f434b66e.chunk.js.map",
   "static/js/1.3742168c.chunk.js": "/text-db-front/static/js/1.3742168c.chunk.js",
   "static/js/1.3742168c.chunk.js.map": "/text-db-front/static/js/1.3742168c.chunk.js.map",
   "runtime~main.js": "/text-db-front/static/js/runtime~main.4d250ad2.js",
   "runtime~main.js.map": "/text-db-front/static/js/runtime~main.4d250ad2.js.map",
-  "static/css/main.b774602e.chunk.css.map": "/text-db-front/static/css/main.b774602e.chunk.css.map",
+  "static/css/main.708aa6a4.chunk.css.map": "/text-db-front/static/css/main.708aa6a4.chunk.css.map",
   "index.html": "/text-db-front/index.html",
-  "precache-manifest.007d6c1fc65a39c3bba9af17888777fc.js": "/text-db-front/precache-manifest.007d6c1fc65a39c3bba9af17888777fc.js",
+  "precache-manifest.2d6a17857a0fa9d756518c2d7824978f.js": "/text-db-front/precache-manifest.2d6a17857a0fa9d756518c2d7824978f.js",
   "service-worker.js": "/text-db-front/service-worker.js"
 }
